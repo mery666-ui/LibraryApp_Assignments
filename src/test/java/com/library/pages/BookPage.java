@@ -48,6 +48,10 @@ public class BookPage extends BasePage {
     public WebElement description;
 
 
+    @FindBy(css = "a[class='btn btn-primary btn-sm']")
+    public WebElement editBookButton;
+
+
 
     public WebElement editBook(String book) {
         String xpath = "//td[3][.='" + book + "']/../td/a";

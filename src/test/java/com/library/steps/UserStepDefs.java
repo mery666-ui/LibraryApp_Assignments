@@ -1,13 +1,26 @@
 package com.library.steps;
 
+import com.library.pages.BookPage;
+import com.library.pages.DashBoardPage;
+import com.library.pages.LoginPage;
+import com.library.utility.BrowserUtil;
 import com.library.utility.DB_Util;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class UserStepDefs {
     String actualUserCount;
+    LoginPage loginPage = new LoginPage();
+    DashBoardPage dashBoardPage = new DashBoardPage();
+    String actualBorrowedBookNumbers;
+    BookPage bookPage = new BookPage();
+    List<String> actualCategoryList;
+
+
     @Given("Establish the database connection")
     public void establish_the_database_connection() {
 
@@ -47,4 +60,21 @@ public class UserStepDefs {
         System.out.println("-----------------------------------------");
 
     }
+
+    @When("Execute query to get all columns")
+    public void executeQueryToGetAllColumns() {
+
+
+
+
+
+    }
+
+    @Then("verify the below columns are listed in result")
+    public void verifyTheBelowColumnsAreListedInResult() {
+
+
+    }
+
+
 }
